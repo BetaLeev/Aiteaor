@@ -9,7 +9,7 @@
     <br>
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <slider v-bind="setting"/>
+        <slider v-bind="setting" class="scroll-slider"/>
       </div>
     </div>
     <div class="container center"></div>
@@ -40,7 +40,7 @@ export default {
         imgStyle: {
           borderRadius: "20px"
         },
-        autoRoll: false
+        autoRoll: true
       }
     };
   }
@@ -54,6 +54,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  padding-bottom: 100px;
+}
+.scroll-slider {
+  margin: 0 auto;
+}
+.jumbotron {
+  margin-bottom: 2rem;
 }
 </style>
