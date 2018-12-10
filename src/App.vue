@@ -12,7 +12,10 @@
         <slider v-bind="setting"/>
       </div>
     </div>
-    <div class="container center"></div>
+    <div class="container center">广告
+      <AdSlider/>
+    </div>
+    <new-list/>
   </div>
 </template>
 
@@ -22,9 +25,19 @@ import HeadBanner from "@/components/head/HeadBanner";
 import LogIn from "@/components/login/LogIn";
 import ContainerImg from "@/components/container/ContainerImg";
 import slider from "vue-image-scroll";
+import AdSlider from "@/components/ad/AdSlider";
+import NewList from "@/components/news/NewList";
 export default {
   name: "App",
-  components: { HeadNav, HeadBanner, LogIn, ContainerImg, slider },
+  components: {
+    HeadNav,
+    HeadBanner,
+    LogIn,
+    ContainerImg,
+    slider,
+    AdSlider,
+    NewList
+  },
   data: function() {
     return {
       setting: {
