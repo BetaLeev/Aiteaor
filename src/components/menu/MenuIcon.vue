@@ -71,8 +71,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .swiper-container {
-  height: 160px;
+  height: 170px;
   width: 100%;
+  padding-top: 5px;
+  margin-top: 10px;
   margin: auto;
   background-color: red;
   border-radius: 13px;

@@ -41,20 +41,28 @@ export default {};
 
 <style lang="scss" scoped>
 .product {
+  border-radius: 13px;
   padding-top: 20px;
   margin-top: 10px;
-  height: 330px;
+  height: 400px;
   width: 100%;
   background-color: chocolate;
+}
+.row {
+  height: 50%;
 }
 .row div {
   display: flex;
   width: 50%;
-  height: 100px;
-  border: 1px solid chocolate;
+  height: 130px;
+  background-color: aqua;
+  border: 3px solid chocolate;
 }
-.row img {
+.row div img {
+  clear: both;
   width: 100%;
+  position: relative;
+  left: -10px;
   height: 100%;
 }
 </style>

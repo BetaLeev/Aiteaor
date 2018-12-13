@@ -1,31 +1,22 @@
 <template>
   <div>
     <head-nav/>
-    <!-- <head-banner/> -->
     <ad-static/>
-
     <div class="container app-container">
       <menu-icon/>
       <news-letter/>
       <product-show/>
       <product-tabs/>
-    </div>
-    <br>
-    <!-- <log-in/> -->
-    <br>
-    <container-img/>
-    <br>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
+      <div class="container recommend">
+        <h3>产品推荐</h3>
         <slider v-bind="setting" class="scroll-slider"/>
       </div>
+      <news-list/>
+      <br>
     </div>
-    <div class="container center">广告
-      <AdSlider/>
-    </div>
-    <news-list/>
-    <product-swiper/>
-
+    <footer>
+      <footer-icon/>
+    </footer>
     <br>
   </div>
 </template>
@@ -33,7 +24,6 @@
 <script>
 import HeadNav from "@/components/head/HeadNav";
 import HeadBanner from "@/components/head/HeadBanner";
-import LogIn from "@/components/login/LogIn";
 import ContainerImg from "@/components/container/ContainerImg";
 import slider from "vue-image-scroll";
 import AdSlider from "@/components/ad/AdSlider";
@@ -44,12 +34,13 @@ import MenuIcon from "@/components/menu/MenuIcon";
 import NewsLetter from "@/components/news/NewsLetter";
 import ProductShow from "@/components/product/ProductShow";
 import ProductTabs from "@/components/product/ProductTabs";
+import FooterIcon from "@/components/footer/FooterIcon";
+
 export default {
   name: "App",
   components: {
     HeadNav,
     HeadBanner,
-    LogIn,
     ContainerImg,
     slider,
     AdSlider,
@@ -59,7 +50,8 @@ export default {
     MenuIcon,
     NewsLetter,
     ProductShow,
-    ProductTabs
+    ProductTabs,
+    FooterIcon
   },
   data: function() {
     return {
@@ -70,13 +62,14 @@ export default {
           "https://static.runoob.com/images/mix/img_mountains_wide.jpg"
         ],
         styleObject: {
-          width: "250",
+          width: "290",
           height: "150"
         },
         imgStyle: {
           borderRadius: "20px"
         },
-        autoRoll: true
+        autoRoll: true,
+        interval: 4000
       }
     };
   }
@@ -90,7 +83,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  padding-bottom: 300px;
+  /* padding-bottom: 30px; */
 }
 .scroll-slider {
   margin: 0 auto;
@@ -99,8 +92,12 @@ export default {
   margin-bottom: 2rem;
 }
 .app-container {
+  padding-top: 10px;
   width: 100%;
   margin: auto;
   background-color: chartreuse;
+}
+.recommend {
+  padding: 20px;
 }
 </style>

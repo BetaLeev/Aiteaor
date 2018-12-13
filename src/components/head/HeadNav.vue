@@ -1,9 +1,10 @@
 <template>
   <div class="nav">
     <div class="head-nav">
-      <font-awesome-icon icon="coffee" class="scan fa-2x"/>
+      <i class="el-icon-location"></i>
       <input type="text">
-      <font-awesome-icon icon="coffee" class="message fa-2x"/>
+      <i class="el-icon-search"></i>
+      <i class="el-icon-bell"></i>
     </div>
     <!-- swiper -->
     <swiper :options="swiperOption">
@@ -64,10 +65,15 @@ export default {
   right: 10px;
   position: relative;
 }
+.el-icon-search {
+  position: absolute;
+  top: 12px;
+  left: 72px;
+}
 .head-nav input[type="text"] {
   outline: none;
   border: none;
-  padding-left: 20px;
+  padding-left: 30px;
   width: 70%;
   height: 30px;
   border-radius: 30px;
